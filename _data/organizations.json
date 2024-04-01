@@ -1,0 +1,19 @@
+[
+  {
+    "name": "freeCodeCamp Norman Study Group",
+    "title": "Organizer",
+    "description": "Mentoring others in the skills of HTML, CSS, JavaScript & Git.",
+    "location": "Norman, OK",
+    "image": "/assets/images/organizations/free_code_camp.jpg",
+    "dates": "Mar 2018 - Present",
+    "url": "https://www.meetup.com/FreeCodeCamp-Norman/"
+  },
+  {
+    "name": "Techlahoma Foundation",
+    "title": "Contributor, volunteer & member.",
+    "location": "OKC & Tulsa",
+    "image": "/assets/images/organizations/techlahoma.jpg",
+    "dates": "Jun 2018 - Present",
+    "url": "https://www.techlahoma.org/"
+  }
+]

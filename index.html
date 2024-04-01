@@ -1,0 +1,179 @@
+---
+layout: default
+portrait: assets/images/joe.jpg
+author: Joe Matthews
+subtitle: Father, friend & service-leader.
+email: joe@techwonderful.com
+source: https://github.com/joematthews/resume
+summary: >-
+  Hello, I'm a software engineer with a passion for developing applications and
+  tools that provide an amazing experience for both users and developers.
+---
+<div class="alert alert-warning" role="alert">This is for my personal preservation, hah. As-is except the tag line has changed. Contact information is not accurate. And links may not work.</div>
+<div class="container">
+  <!-- Header -->
+  <div class="row align-items-center">
+    <div class="col-24">
+      <h1 class="resume-title my-accent-font display-1 text-center text-nowrap">
+        {{ page.author }}
+      </h1>
+    </div>
+    <div class="col-md-10">
+      <h4 class="my-accent-font text-center text-muted text-nowrap">{{ page.subtitle }}</h4>
+    </div>
+    <div class="col-10 offset-7 offset-md-0 col-md-4">
+      <img src="{{ page.portrait }}" class="rounded img-responsive mx-auto d-block" style="width:100%;"/>
+    </div>
+    <div class="col-md-10">
+      <h3 class="text-center" style="font-size: 2em; margin-top: .25em;">
+        {% for network in site.data.networks %}
+        <a href="{{ network.url }}" target="_blank"
+          style="text-decoration: none; color: #6c757d; padding: .2em;">
+          <i class="{{ network.icon }}"></i>
+        </a>
+        {% endfor %}
+      </h3>
+    </div>
+    <div class="col-lg-18 offset-lg-3 col-24">
+      <hr/>
+      <p class="text-center" style="font-size: 1.3em;">{{ page.summary }}</p>
+      <p class="text-center"><a href="https://gist.github.com/joematthews/57ee37346e7c509528620fec559b8088">Complete List of Talks from Joe Matthews</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-24 col-lg-4">
+      <div class="card">
+        <div class="card-header text-center">
+          <h2 class="my-accent-font">Skills</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+          {% for skill in site.data.skills %}
+            <div class="col-6 col-sm-4 col-lg-24">
+              <p class="text-center" style="margin-bottom: 5px;">
+                <a href="{{ skill.url }}" target="_blank">
+                  <img class="img-fluid rounded" src="{{ skill.image | relative_url }}">
+                </a>
+                <small class="text-muted d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                  {{ skill.name }}
+                </small>
+              </p>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+      <br/>
+    </div>
+    <div class="col-24 col-lg">
+      <div class="card">
+        <div class="card-header text-center">
+          <h2 class="my-accent-font">Organizations</h2>
+        </div>
+        <div class="card-body">
+          {% for organization in site.data.organizations %}
+          <div class="row align-items-center">
+            <div class="col-6 col-sm-4 order-lg-1 order-md-1">
+              <a href="{{ organization.url }}" target="_blank">
+                <img class="img-fluid rounded" src="{{ organization.image | relative_url }}">
+              </a>
+            </div>
+            <div class="col-18 col-lg order-lg-3 col-md order-md-3">
+              <p class="text-muted text-nowrap text-right">{{ organization.title }}</p>
+            </div>
+            <div class="col-24 col-lg order-lg-2 col-md order-md-2">
+              <h3 class="text-nowrap">{{ organization.name }}</h3>
+            </div>
+            <div class="col-24 col-lg order-lg-4 order-md-4">
+              <p class="text-muted text-right"><small>{{ organization.dates }}</small></p>
+            </div>
+          </div>
+          {% if organization != site.data.organizations.last %}
+          <hr/>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <br/>
+      <div class="card">
+        <div class="card-header text-center">
+          <h2 class="my-accent-font">Companies</h2>
+        </div>
+        <div class="card-body">
+          {% for company in site.data.companies %}
+          <div class="row align-items-center">
+            <div class="col-6 order-1 col-sm-4 order-md-1">
+              <a href="{{ company.url }}" target="_blank">
+                <img class="img-fluid rounded" src="{{ company.image | relative_url }}">
+              </a>
+            </div>
+            <div class="col-24 order-3 col-md order-md-2">
+              <h3 class=""><strong>{{ company.name }}</strong></h3>
+            </div>
+            <div class="col-18 order-2 col-md-4 order-md-3">
+              <p class="text-muted text-right">{{ company.location }}</p>
+            </div>
+          </div>
+          {% for position in company.positions %}
+          <div class="row align-items-center">
+            <div class="col-24 col-md-20 offset-md-4 col-lg-20">
+              <h4>{{ position.name }}</h4>
+            </div>
+            <div class="col-24 col-md-5 col-lg-5">
+              <p class="text-muted text-left"><small>{{ position.dates }}</small></p>
+            </div>
+            <div class="col-24 col-md-19 col-lg-15 offset-lg-0">
+              <ul>
+                {% for point in position.points %}
+                <li class="text-muted">{{ point }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+          {% if company != site.data.companies.last %}
+            <hr/>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <br/>
+      <div class="card">
+        <div class="card-header text-center">
+          <h2 class="my-accent-font">Education & Certifications</h2>
+        </div>
+        <div class="card-body">
+          {% for school in site.data.schools %}
+          <div class="row align-items-center">
+            <div class="col-6 col-sm-4 order-lg-1 order-md-1">
+              <a href="{{ school.url }}" target="_blank">
+                <img class="img-fluid rounded" src="{{ school.image | relative_url }}">
+              </a>
+            </div>
+            <div class="col-18 col-lg order-lg-3 col-md order-md-3">
+              <p class="text-muted text-nowrap text-right">{{ school.description }}</p>
+            </div>
+            <div class="col-24 col-lg order-lg-2 col-md order-md-2">
+              <h3 class="text-nowrap">{{ school.name }}</h3>
+            </div>
+            <div class="col-24 col-lg order-lg-4 order-md-4">
+              <p class="text-muted text-right"><small>{{ school.dates }}</small></p>
+            </div>
+          </div>
+          {% if school != site.data.school.last %}
+          <hr/>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-24">
+      <br/>
+      <p class="text-center">View page <a href="{{ page.source }}" target="_blank">source</a>.</p>
+      <p class="text-center">&copy; {{ "now" | date: "%Y" }} {{ page.author }}</a></p>
+      <br/>
+    </div>
+  </div>
+</div><!-- container -->

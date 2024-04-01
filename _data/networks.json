@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "fas fa-phone",
+    "url": ""
+  },{
+    "icon": "fas fa-envelope",
+    "url": "mailto:joematthewsokc@gmail.com"
+  },{
+    "icon": "fab fa-github",
+    "url": "https://github.com/joematthews"
+  },{
+    "icon": "fab fa-twitter",
+    "url": "https://twitter.com/joematthewsokc"
+  },{
+    "icon": "fab fa-linkedin",
+    "url": "https://www.linkedin.com/in/joematthewsokc/"
+  }
+]
