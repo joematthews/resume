@@ -1,3 +1,6 @@
+> [!NOTE]  
+> I created this resume back in 2018. It is not up to date with my current information, but this repo may still be useful to others who would like to create an online resume for themselves.
+
 ![resume screenshot](https://raw.githubusercontent.com/joematthews/resume/master/assets/images/resume_screenshot.png)
 # Simple, mobile-friendly, Jekyll-based resume
 
